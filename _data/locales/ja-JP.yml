@@ -43,7 +43,7 @@ copyright:
 meta: :PLATFORM 用の :THEME を使用しています。
 
 not_found:
-  statement: このURLは存在しないものを指し示しています。
+  statement: このURLは存在しないものを指し示しています。キャッシュクリアを試みるか、プライベートモードでの閲覧をお試し下さい。
 
 notification:
   update_found: 新しいバージョンが利用可能です。
