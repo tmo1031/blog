@@ -2,7 +2,6 @@
 layout: post
 categories: [慶應通信, 学習法]
 tags: [慶應通信, Github, Github Education, AI]
-author: tmo
 slug: "1082"
 ---
 GithubPro機能を無料で使える学生ライセンスを申請しました。コツがあったので共有します。

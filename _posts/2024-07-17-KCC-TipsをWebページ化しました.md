@@ -2,7 +2,6 @@
 layout: post
 categories: [便利ツール, KCC-Tips]
 tags: [KCC-Tips]
-author: tmo
 slug: "1010"
 ---
 GitHubでWebページを公開できることに気がついたので、今までに作ったものを実験的に公開することにしました。
