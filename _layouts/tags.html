@@ -9,14 +9,29 @@ layout: page
     {% assign tags = tags | push: t[0] %}
   {% endfor %}
 
-  {% assign sorted_tags = tags | sort_natural %}
+  {%- comment -%}
+    Create a new array to hold sortable strings.
+    The string format is "post_count::tag_name".
+    We pad the count with leading zeros to ensure correct string sorting.
+  {%- endcomment -%}
+  {%- assign tag_strings = "" | split: "" -%}
+  {%- for tag in site.tags -%}
+    {%- comment -%} Prepend '0000' and take the last 4 characters for padding {%- endcomment -%}
+    {%- assign post_count = tag[1].size | prepend: "0000" | slice: -4, 4 -%}
+    {%- assign tag_string = post_count | append: "::" | append: tag[0] -%}
+    {%- assign tag_strings = tag_strings | push: tag_string -%}
+  {%- endfor -%}
 
-  {% for t in sorted_tags %}
-    <div>
-      <a class="tag" href="{{ t | slugify | url_encode | prepend: '/tags/' | append: '/' | relative_url }}">
-        {{ t -}}
-        <span class="text-muted">{{ site.tags[t].size }}</span>
-      </a>
-    </div>
-  {% endfor %}
+  {%- comment -%} Sort the strings descending (Z->A), which works because of the padded count {%- endcomment -%}
+  {%- assign tags = tag_strings | sort | reverse -%}
+
+  {%- for item in tags -%}
+    {%- assign parts = item | split: "::" -%}
+    {%- assign post_count = parts[0] | plus: 0 -%} {%- comment -%} Convert back to number {%- endcomment -%}
+    {%- assign tag_name = parts[1] -%}
+    <a class="tag" href="{{ '/tags/' | append: tag_name | downcase | relative_url }}">
+      {{- tag_name -}}
+      <span class="text-muted">{{ post_count }}</span>
+    </a>
+  {%- endfor -%}
 </div>
