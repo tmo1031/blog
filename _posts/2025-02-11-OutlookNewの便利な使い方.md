@@ -3,6 +3,7 @@ layout: post
 categories: [慶應通信, 学習法]
 tags: [慶應通信, Outlook]
 author: tmo
+slug: "1093"
 ---
 MS Outlook が新しいアプリとして Outlook New という名前になってかなりの時間が経ちました。
 ようやく私も New を使うようになったのですが、Outlook 旧と設計思想が違うようで、慣れるまでに時間がかかっています。
