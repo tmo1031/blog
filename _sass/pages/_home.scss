@@ -67,8 +67,13 @@
           @extend %muted;
 
           p {
-            @extend %text-clip;
+            /* @extend %text-clip; */ /* ← この行をコメントアウトまたは削除 */
 
+            /* 3行まで表示して、それ以上は...で省略する設定 */
+            display: -webkit-box;
+            -webkit-line-clamp: 5; /* ← この数字で表示したい行数を調整 */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
             line-height: 1.5;
             margin: 0;
           }
