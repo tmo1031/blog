@@ -45,7 +45,6 @@ task :new_post, [:title] do |t, args|
   content = <<~HEREDOC
     ---
     layout: post
-    title: "#{title}"
     categories: []
     tags: []
     slug: "#{new_slug_number}"
