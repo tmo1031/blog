@@ -12,9 +12,31 @@ task :new_post, [:title] do |t, args|
   end
 
   # --- STEP 1: slug用の連番を計算 ---
-  max_slug_number = Dir.glob("_posts/*.md").map do |f|
-    begin; YAML.load_file(f)['slug'].to_i; rescue; 0; end
-  end.max || 0
+  # 既存の投稿ファイルから有効なslug番号のみを抽出し、最大値を計算します。
+  # slugキーが存在しない、または数値に変換できない場合はスキップします。
+  valid_slug_numbers = Dir.glob("_posts/*.md").map do |f|
+    begin
+      # YAML.load_file の代わりに YAML.safe_load_file を使用し、Timeクラスを許可します
+      front_matter = YAML.safe_load_file(f, permitted_classes: [Time])
+      
+      if front_matter && front_matter.key?('slug') && front_matter['slug'].to_s =~ /\A\d+\z/
+        front_matter['slug'].to_i
+      else
+        nil # slugがない、または無効な場合はnilを返す
+      end
+    rescue Psych::SyntaxError => e
+      # YAMLのパースエラーが発生した場合は警告を出し、このファイルのslugは無視します
+      puts "⚠️ 警告: ファイル #{f} のYAMLフロントマターにエラーがあります。このファイルのslugは無視されます。エラー: #{e.message}"
+      nil
+    rescue => e
+      # その他の予期せぬエラーが発生した場合も警告を出し、このファイルのslugは無視します
+      puts "⚠️ 警告: ファイル #{f} の処理中に予期せぬエラーが発生しました。このファイルのslugは無視されます。エラー: #{e.message}"
+      nil
+    end
+  end.compact # nilを取り除く
+
+  # 有効なslug番号の中から最大値を見つける。有効なslugが一つもなければ0とする。
+  max_slug_number = valid_slug_numbers.max || 0
   new_slug_number = max_slug_number + 1
 
   # ファイル名に使うための文字列を生成
