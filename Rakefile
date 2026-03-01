@@ -14,7 +14,7 @@ task :new_post, [:title] do |t, args|
   # --- STEP 1: slug用の連番を計算 ---
   # 既存の投稿ファイルから有効なslug番号のみを抽出し、最大値を計算します。
   # slugキーが存在しない、または数値に変換できない場合はスキップします。
-  valid_slug_numbers = Dir.glob("_posts/*.md").map do |f|
+  valid_slug_numbers = Dir.glob("_posts/*.txt").map do |f|
     begin
       # YAML.load_file の代わりに YAML.safe_load_file を使用し、Timeクラスを許可します
       front_matter = YAML.safe_load_file(f, permitted_classes: [Time])
@@ -62,7 +62,7 @@ task :new_post, [:title] do |t, args|
 
   # --- STEP 3: 投稿ファイルを作成 ---
   date_stamp = Date.today.strftime('%Y-%m-%d')
-  filepath = "_posts/#{date_stamp}-#{filename_title}.md"
+  filepath = "_posts/#{date_stamp}-#{filename_title}.txt"
 
   content = <<~HEREDOC
     ---
