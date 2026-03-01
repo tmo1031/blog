@@ -168,6 +168,8 @@ kramdown:
   parse_block_html: true
   toc_levels: 1..4
 
+markdown_ext: "md,markdown,txt"
+
 collections:
   tabs:
     output: true
