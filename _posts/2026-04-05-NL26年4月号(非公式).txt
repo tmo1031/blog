@@ -14,11 +14,12 @@ description: |
     27年3月に卒業したい人は5/29迄に予定申告提出
     多要素認証有効化してね
     4月配本の電子テキストは5月からDL可
+image: /assets/img/nl/NL_202604.png
 ---
 ## 各種掲示板
-* 科目試験: https://sites.google.com/keio.jp/tsushin-exam-guide
-* スクーリング: https://sites.google.com/keio.jp/tsushin-schooling-guide
-* 慶友会一覧: https://www.tsushin.keio.ac.jp/about/keiyukai.html
+* [科目試験](https://sites.google.com/keio.jp/tsushin-exam-guide)
+* [スクーリング](https://sites.google.com/keio.jp/tsushin-schooling-guide)
+* [慶友会一覧](https://www.tsushin.keio.ac.jp/about/keiyukai.html)
 
 ## スケジュール
 ### 4月
@@ -81,20 +82,14 @@ description: |
 * 新規にレポートを提出する際は、kcc-channelによるレポート提出を強く推奨
 
 ### 多要素認証必須化
-26年5月1日から通信教育課程所属全塾生に導入必須、詳細下記
-
-https://sites.google.com/keio.jp/kmfa-info-1st-jp/
+26年5月1日から通信教育課程所属全塾生に導入必須、[詳細](https://sites.google.com/keio.jp/kmfa-info-1st-jp/)
 
 ## 行事
 ### 入学式および入学オリエンテーション
 26年4月1日（水）（12:00開場予定、12:15集合）
 
-https://www.tsushin.keio.ac.jp/news/entry/20260316-173096.html
-
 ## 科目試験
 26年4月4日(土)、5日(日)
-
-特設サイト: https://sites.google.com/keio.jp/tsushin-exam-guide
 
 * 時間割、会場、持ち物、注意事項、持込可否、ペン書き科目を確認しましょう！
 * 一部の地方会場では試験後に講演会もあります(札幌、長野、福岡)
@@ -108,8 +103,6 @@ https://www.tsushin.keio.ac.jp/news/entry/20260316-173096.html
 
 ## スクーリング
 夏期・体育・実験スクーリング履修申告期間: 2026年5月8日（金）10時～5月14日（木）17時
-
-特設サイト: https://sites.google.com/keio.jp/tsushin-schooling-guide
 
 ## 卒業/卒業論文
 詳細は塾生ガイド2026 第8章を参照
@@ -150,5 +143,5 @@ https://www.tsushin.keio.ac.jp/news/entry/20260316-173096.html
 (各慶友会に問い合わせください)
 
 ## 慶友会
-慶友会掲示板: 未公開
-慶友会一覧: https://www.tsushin.keio.ac.jp/about/keiyukai.html
+* 慶友会掲示板: 未公開
+* [慶友会一覧](https://www.tsushin.keio.ac.jp/about/keiyukai.html)
