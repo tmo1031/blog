@@ -46,8 +46,7 @@ image: /assets/img/nl/NL_202605.png
 * 主な対象：学修計画の立て方が分からない方、卒業要件について知りたい方
 
 #### オンライン図書館セミナー・Zoomレファレンスについて
-* 過去の図書館セミナー動画・資料
-https://libguides.lib.keio.ac.jp/correspondence
+* 過去の図書館セミナー動画・資料 [リンク](https://libguides.lib.keio.ac.jp/correspondence)
 * Zoom レファレンス 塾ガ26p.195
 
 #### 多要素認証必須化
